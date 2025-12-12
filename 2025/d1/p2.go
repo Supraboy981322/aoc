@@ -24,17 +24,18 @@ func main() {
 			for j := 0; j < n; j++ {
 				dir--
 				if dir == -1 { dir = 99 }
+				if dir == 0 { res++ }
 			}
 		 case 'R': 
 			for j := 0; j < n; j++ {
 				dir++
 				if dir == 100 { dir = 0 }
+				if dir == 0 { res++ }
 			}
      default:
 			fmt.Printf("bad dir: %s (line %d)", string(d), i)
 			os.Exit(1)
 		}
-		if dir == 0 { res++ }
 	}
 	fmt.Printf("\nres:  %d\n",res)
 }
