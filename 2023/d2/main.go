@@ -16,7 +16,11 @@ var (
 )
 
 func main() {
-	inR, _ := os.ReadFile("in2.txt")
+	inR, err := os.ReadFile("p1.txt")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to read file: %v\n", err)
+		os.Exit(1)
+	}
 	games := strings.Split(string(inR), "\n")
 	games = games[:len(games)-1]
 	var res int
