@@ -35,5 +35,6 @@ func main() {
 		f, _ := strconv.Atoi(n1+n2)
 		res += f
 	}
+
 	fmt.Println(res)
 }
