@@ -104,7 +104,7 @@ func main() {
 				if ok { //if it is an int
 					//convert it to a string
 					n := strconv.Itoa(nR)
-//					j--
+//					j--  //move current char back by one
 					//if iteration 1 of line, set num 1
 					//  otherwise, set num 2
 					if i == 0 { n1 = n; break //stop loop 
